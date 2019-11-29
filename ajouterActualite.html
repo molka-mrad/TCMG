@@ -1,0 +1,54 @@
+
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <link type="text/css" rel="stylesheet" href="style.css">
+            <script language="javascript" type="text/javascript" src="javaS.js"></script>
+        </head>
+        <body>
+            <div class="entete">
+                <p>Tennis Club de Mégrine</p>
+                <img class="logo" src="logo.png" width="80"></br>
+            </div>
+            <div class="page">
+                
+                <div class="menu">
+                    <h2>Menu</h2>
+                    <ul>
+                        <li><a href="actualites.php">Actualités</a></li>
+                        <li><a href="evenements.php">Evenements</a></li>
+                        <li><a href="membres.php">Membres</a></li>
+                        <li><a href="formateurs.php">Formateurs</a></li>
+                        <li><a href="produits.php">Produits</a></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <form method="POST" action="ajouterActualite.php">
+                        <table>
+                            <caption>Ajouter Actualité</caption>
+                            <tr>
+                                <td>Id</td>
+                                <td><input type="number" name="id" id="id" required></td>
+                            </tr>
+                            <tr>
+                                <td>Titre</td>
+                                <td><input type="text" name="titre" id="titre" required></td>
+                            </tr>
+                            <tr>
+                                <td>Contenu</td>
+                                <td><input type="text" name="contenu" id="contenu" required></td>
+                            </tr>
+                            <tr>
+                                <td>Image</td>
+                                <td><input type="text" name="img" id="img" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" name="ajouter" onclick="return valider1()" value="ajouter"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            
+        </body>
+    </html>
