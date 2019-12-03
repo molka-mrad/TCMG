@@ -1,21 +1,18 @@
 <?php
-class Database
-{   
-    private static $instance=NULL;
+class config
+{
+  private static $instance = NULL;
 
-    public static function Connexion(){
-        if(!isset(self::$instance)){
-            try{
-                $servername="localhost";
-                $username="root";
-                $password="";
-                $dbname="tcmg";
-                self::$instance = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                } catch (Exception $e) {
-                    die('Erreur: '.$e->getMessage());
-                }
-            }
-            return self::$instance;
-        }
-    } 
-    ?>
+  public static function getConnexion()
+  {
+    if (!isset(self::$instance)) {
+      try {
+        self::$instance = new PDO('mysql:host=localhost;
+        dbname=tcmg', 'root', '');
+      } catch (Exception $e) {
+        die('Erreur: ' . $e->getMessage());
+      }
+    }
+    return self::$instance;
+  }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+        <title>Tennis Club de Mégrine TCMG</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="css/jquery.slim.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        
+  </head>
+  <body>
+        <nav class="navig">
+                <div class="log">
+                    <?php session_start ();  ?>
+                     if (isset($_SESSION['l']) && isset($_SESSION['p'])) 
+                     { 
+                    
+                       echo 'Votre login est <b>'.$_SESSION['l'].'</b> <br>et votre mot de passe est <b>'.$_SESSION['p'].
+                      '</b>; 
+                      echo '<a href="./logout.php">Se déconnecter</a>';
+                    }
+                    else { 
+                          ?>
+                      <form id="formconnex" name="formconnex" method="POST" action="connexion.php">
+                          Login :
+                          <input type="text" name="login" id="login" />
+                          Password : 
+                          <input type="password" name="pwd" id="pwd" />
+                          <input type="submit" name="button" id="button" value="Valider" />
+                      </form>
+                    <?php
+                    }  
+                    ?>
+                  
+                </div>
+                <div class="entete">
+                    <a class="navbar-title" href="index.html">Tennis Club de Mégrine</a></br>
+                    <img class="logo" src="images/logo.png" width="80"></br>
+                </div>
+                <div class="menu">
+                    <table class="menu-tab" border="0" width="80%" align="center">
+                        <tr>
+                            <td class="nav-item"><a href="index.html" class="nav-link">Accueil</a></td>
+                            <td class="nav-item"><a href="MonClub.html" class="nav-link">Notre Club</a></td>
+                            <td class="nav-item"><a href="NosOffres.html" class="nav-link">Nos Offres</a></td>
+                            <td class="nav-item"><a href="boutique.html" class="nav-link">Notre Boutique</a></td>
+                            <td class="nav-item"><a href="espacepriv.php" class="nav-link">Mon Espace</a></td>
+                            <td class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></td>
+                        </tr>
+                    </table>
+                </div>
+        </nav>
+
+
+        
+        <section class="home-slider js-fullheight owl-carousel">
+            <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-10 text ftco-animate text-center">
+                    <h1 class="mb-4">Tennis Club de Mégrine</h1>
+                    <h3 class="subheading">citation</h3>
+                    <p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3">View our works</a></p>
+                </div>
+                </div>
+                </div>
+            </div>
+        
+            <div class="slider-item js-fullheight" style="background-image:url(images/bg_2.jpg);">
+                <div class="overlay"></div>
+                <div class="container">
+                <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+                <div class="col-md-10 text ftco-animate text-center">
+                    <h1 class="mb-4">Tennis Club de Mégrine</h1>
+                    <h3 class="subheading">citation</h3>
+                    <p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3">View our works</a></p>
+                </div>
+                </div>
+                </div>
+            </div>
+        </section>
+          
+
+        <section class="aze">
+            <div class="welcome" style="background-image:url(images/bg_1.jpg);">
+                <div class="container">
+                    <h1 class="titre">Bienvenue à Tennis Club de Mégrine</h1>
+
+                </div>
+            </div> 
+        </section>
+    </br>
+        <section class="aze">
+            <div class="actualite">
+                    <h1 class="titre">Actualités</h1>
+    
+            </div>
+        </section>
+
+        <div class="container">
+
+                <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Gallerie</h1>
+              
+                <hr class="mt-2 mb-5">
+              
+                <div class="row text-center text-lg-left">
+              
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                          <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
+                        </a>
+                  </div>
+                </div>
+              
+              </div>
+        
+        
+  </body>
+  </html>
