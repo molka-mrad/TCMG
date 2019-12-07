@@ -51,6 +51,7 @@ a.navbar-title:hover {
 }
 .entete{
     text-align: center;
+    margin-bottom: 10px;
 }
 a.navbar-title{
     text-decoration: none;
@@ -59,7 +60,7 @@ a.navbar-title{
 }
 .menu{
     margin-top: 20px;
-    background-color:rgb(219, 237, 248) ;
+    background-color:#00A6A6 ;
 }
 .nav-item{
     text-align: center;
@@ -82,7 +83,8 @@ a.nav-link:hover{
 }
 .aze{
     box-sizing: border-box;
-    height: 1000px;
+    height: fit-content;
+    background-color: #F08700;
 }
 
 .welcome{
@@ -109,25 +111,179 @@ a.nav-link:hover{
 
 .bloc-accueil{
     height: fit-content;
-    background-color: rgb(219, 237, 248);
     position: absolute;
     left: 0;
     right: 0;
     padding: 25px;
 }
 .img-actu{
-    width: 50%;
+    width: 100%;
+    text-align: center;
 }
 .img-form{
     height: 500px;
 }
 .table-actu{
-    padding: 20px;
+    width: 95%;
 }
 
-.inscri{
-    background-color: rgb(219, 237, 248) ;
+.contenu{
+    background-image: url(images/bg_1.jpg);
+    background-position: center center !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+    height: 490px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.table-inscri{
+    background-color: rgba(0, 0, 0, 0.288);
+}
+
+/*   ///////////////////////////////////////////  VIDEOO ///////////////////////////////////////////         */
+
+.vid {
+    position: relative;
+    background-color: black;
+    height: 80vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+.vid video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .vid .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .vid .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    .vid {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+    .vid video {
+      display: none;
+    }
+  }
+
+  /* FIN VIDEOOOOO */
+
+  /* ///////////////////////////////////// FOOOOOTER ////////////////////////////// */
+  /* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 20px 0;
+}
+
+
+#footer {
+    background: #00A6A6 !important;
+    padding-left: 80px;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+/* FIN FOOTER */
+
+
+hr {border-top: 1px solid #000; width:50%;}
+
+a {color: #000;}
+
+a:link{text-decoration:none;}
+
+#contact2{
+    letter-spacing:3px;
 }
 
 
 
+#author a{
+  color: #fff;
+  text-decoration: none;
+    
+}

@@ -3,7 +3,7 @@
   <head>
         <title>Tennis Club de Mégrine TCMG</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stylefront.css">
         <script language="javascript" type="text/javascript" src="java.js"></script>
         
   </head>
@@ -67,7 +67,7 @@
             Les frais d'inscriptions à l'école de tennis sont de 350DT/saison</br></br>
             
             <form class="inscri" method="POST" action="ajoutervisi.php">
-                <table border="0">
+                <table class="table-inscri" border="0">
                 <tr>
                         <td>CIN</td>
                         <td>

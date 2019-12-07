@@ -64,15 +64,15 @@
                
             </SCRIPT> 
 
-            Les frais d'inscriptions à l'école de tennis sont de 350DT/saison</br></br>
+            </br>
+
             <a href="ajoutervisiteur.php"><input type="submit"  value="Abonne boutique "> </a>
             <form class="inscri" method="POST" action="ajouter.php">
-                <table border="0">
+                <table class="table-inscri" border="0">
                 <tr>
                         <td>CIN</td>
                         <td>
                             <input type="number" name="cin" id="cin" >
-                            
                         </td>
                     </tr>
                     <tr>
@@ -99,7 +99,6 @@
                         <td>incription</td>
                         <td>
                             <input type="text" name="inscription" id ="firstdate" value=" <?php echo  date("Y/m/d")   ?>" readonly >
-                            
                         </td>
 
                     </tr>
@@ -107,9 +106,7 @@
                         <td>abonnement</td>
                         <td>
                             <input type="date" name="abonnement" id="secdate" >
-                            
                         </td>
-                        
                     </tr>
                    
                     <tr>
@@ -134,6 +131,9 @@
                 </table>
                 <input hidden type="text" name="role" value="abonne">
             </form>
+
+            
+            Les frais d'inscriptions à l'école de tennis sont de 350DT/saison
             
         </div>
     </body>
