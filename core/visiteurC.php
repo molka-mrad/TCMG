@@ -1,5 +1,5 @@
 <?php
-include "config1.php";
+include "../config.php";
 
 class visiteurc
 {
