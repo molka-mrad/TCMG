@@ -1,5 +1,5 @@
 <?php 
-include '../dbconfig.php';
+include '../config.php';
 class User{
 	private $login;
     private $pwd;
@@ -10,8 +10,8 @@ class User{
 	{
 		$this->login=$login;
 		$this->pwd=$pwd;
-		$c=new Database();
-		$this->conn=$c->connexion();
+		$c=new config();
+		$this->conn=$c->getConnexion();
 		
 	}
 	function getLog()

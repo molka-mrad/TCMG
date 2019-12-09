@@ -17,8 +17,8 @@ include 'User.php';
 	$rep=$conn->query($req);
 	$res=$rep->fetchAll();
 	*/
-$c=new Database();
-$conn=$c->connexion();
+$c=new config();
+$conn=$c->getConnexion();
 $user=new User($_POST['login'],$_POST['pwd'],$conn);
 $u=$user->Logedin($conn,$_POST['login'],$_POST['pwd']);
 

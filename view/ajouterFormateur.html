@@ -3,6 +3,7 @@
         <head>
             <meta charset="UTF-8">
             <link type="text/css" rel="stylesheet" href="style.css">
+            <script language="javascript" type="text/javascript" src="javaS.js"></script>
         </head>
         <body>
             <div class="entete">
@@ -27,38 +28,38 @@
                             <caption>Ajouter Formateur</caption>
                             <tr>
                                 <td>CIN</td>
-                                <td><input type="number" name="cin"></td>
+                                <td><input type="number" name="cin" id="cin"></td>
                             </tr>
                             <tr>
                                 <td>Nom</td>
-                                <td><input type="text" name="nom"></td>
+                                <td><input type="text" name="nom" id="nom"></td>
                             </tr>
                             <tr>
                                 <td>Prenom</td>
-                                <td><input type="text" name="prenom"></td>
+                                <td><input type="text" name="prenom" id="prenom"></td>
                             </tr>
                             <tr>
                                 <td>tel</td>
-                                <td><input type="number" name="tel"></td>
+                                <td><input type="number" name="tel" id="tel"></td>
                             </tr>
                             <tr>
                                 <td>age</td>
-                                <td><input type="text" name="age"></td>
+                                <td><input type="text" name="age" id="age"></td>
                             </tr>
                             <tr>
                                 <td>Date inscription</td>
-                                <td><input type="date" name="inscription"></td>
+                                <td><input type="date" name="inscription" id="inscription"></td>
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td><input type="text" name="email"></td>
+                                <td><input type="email" name="email" id="email"></td>
                             </tr>
                             <tr>
                                 <td>Img</td>
-                                <td><input type="text" name="img"></td>
+                                <td><input type="text" name="img" id="img"></td>
                             </tr>
                             <tr>
-                                <td><input type="submit" name="ajouter" value="ajouter"></td>
+                                <td><input type="submit" name="ajouter" value="ajouter" onclick="return validerr()"></td>
                             </tr>
                         </table>
                     </form>

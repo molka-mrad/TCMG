@@ -4,7 +4,7 @@
         <title>Tennis Club de Mégrine TCMG</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="stylefront.css">
-        <script language="javascript" type="text/javascript" src="java.js"></script>
+        <script language="javascript" type="text/javascript" src="javaS.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery-3.3.1.min.js"></script>
