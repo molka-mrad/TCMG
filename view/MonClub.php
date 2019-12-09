@@ -51,7 +51,8 @@
                 </div>
                 <div class="form-check">
                   <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Afficher Mot de Passe</button> 
-                  <input type="submit" class="btn btn-info" name="button" id="button" ></input>
+                  <input type="submit" class="btn btn-info" name="button" id="button" ></input><a href="recumdp.php"><input type="button"  value="MDP oublié?" class="btn btn-info"> </a>
+                  <a href="recumdp.php"><input type="button"  value="MDP oublié?" class="btn btn-info"> </a> 
                 </div>
             </form>
           <?php
