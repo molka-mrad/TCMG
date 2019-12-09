@@ -5,7 +5,7 @@ class membrec
 {
 	function affichermembres()
 	{
-		$sql = "SELECT * From membres";
+		$sql = "SELECT * From membres order by age";
 		$db = config::getConnexion();
 		try {
 			$liste = $db->query($sql);
