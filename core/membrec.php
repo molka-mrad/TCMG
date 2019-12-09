@@ -49,10 +49,11 @@ class membrec
 		}
 	}
 
-   
+	
+	
 	function ajoutermembree($membre)
 	{
-		$sql = "insert into membres (cin,nom,prenom,tel,age,inscription,abonnement,email,paiement,role) values (:cin, :nom,:prenom,:tel,:age,:inscription,:abonnement,:email,:paiement,:role)";
+		$sql = "insert into membres (cin,nom,prenom,tel,age,inscription,abonnement,email,mdp,paiement,role) values (:cin, :nom,:prenom,:tel,:age,:inscription,:abonnement,:email,:mdp,:paiement,:role) ;insert into users(user_id,user_name,user_email,user_pass,joining_date,role) VALUES(:cin,:nom,:email,:mdp,:inscription,:role) ";
 		$db = config::getConnexion();
 		try {
 			$req = $db->prepare($sql);
@@ -65,6 +66,7 @@ class membrec
 			$inscription = $membre->getinscription();
 			$abonnement = $membre->getabonnement();
 			$email = $membre->getmail();
+			$mdp = $membre->getmdp();
 			$paiement = $membre->getpai();
 			$role=$membre->getrole();
 			$req->bindValue(':cin', $cin);
@@ -75,18 +77,17 @@ class membrec
 			$req->bindValue(':inscription', $inscription);
 			$req->bindValue(':abonnement', $abonnement);
 			$req->bindValue(':email', $email);
+			$req->bindValue(':mdp', $mdp);
 			$req->bindValue(':paiement', $paiement);
 			$req->bindValue(':role',$role);
-
 			$req->execute();
 		} catch (Exception $e) {
 			echo 'Erreur: ' . $e->getMessage();
 		}
-	}
-
+    }
 	function modifiermembre($membre, $cin)
 	{
-		$sql = "UPDATE membres SET cin=:cinn, nom=:nom,prenom=:prenom,tel=:tel,age=:age,inscription=:inscription,abonnement=:abonnement,paiement=:pay,role=:role,email=:malo WHERE cin=:cin";
+		$sql = "UPDATE membres SET cin=:cinn, nom=:nom,prenom=:prenom,tel=:tel,age=:age,inscription=:inscription,abonnement=:abonnement,paiement=:pay,role=:role,email=:malo,mdp=:mdp WHERE cin=:cin; UPDATE users SET user_id=:cinn, user_name=:nom,user_email=:malo,user_pass=:mdp,joining_date=:inscription,role=:role ";
 
 		$db = config::getConnexion();
 		//$db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
@@ -100,9 +101,10 @@ class membrec
 			$inscription = $membre->getinscription();
 			$abonnement = $membre->getabonnement();
 			$ma = $membre->getmail();
+			$mdp = $membre->getmdp();
 			$paiiment = $membre->getpai();
 			$role = $membre->getrole();
-			$datas = array(':cinn' => $cinn, ':cin' => $cin, ':nom' => $nom, ':prenom' => $prenom,  ':tel' => $tel, ':age' => $age, ':inscription' => $inscription, ':abonnement' => $abonnement, ':malo' => $ma, ':pay' => $paiiment,':role' => $role);
+			$datas = array(':cinn' => $cinn, ':cin' => $cin, ':nom' => $nom, ':prenom' => $prenom,  ':tel' => $tel, ':age' => $age, ':inscription' => $inscription, ':abonnement' => $abonnement, ':malo' => $ma,':mdp' => $mdp, ':pay' => $paiiment,':role' => $role);
 			$req->bindValue(':cinn', $cinn);
 			$req->bindValue(':cin', $cin);
 			$req->bindValue(':nom', $nom);
@@ -112,6 +114,7 @@ class membrec
 			$req->bindValue(':inscription', $inscription);
 			$req->bindValue(':abonnement', $abonnement);
 			$req->bindValue(':malo', $ma);
+			$req->bindValue(':mdp', $mdp);
 			$req->bindValue(':pay', $paiiment);
 			$req->bindValue(':role', $role);
 

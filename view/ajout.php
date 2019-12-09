@@ -7,7 +7,7 @@ $membre1=new membres($_POST['cin'],$_POST['nom'],$_POST['prenom'],$_POST['tel'],
 
 $membre1c=new membrec();
 $membre1c->ajoutermembree($membre1);
-header('Location: membres.php');
+header('Location: index.php');
 	
 }else{
 	echo "vérifier les champs";

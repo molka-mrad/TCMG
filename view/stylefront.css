@@ -1,12 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 body {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.8;
-    font-weight: 300;
+    font-family:'Oswald', sans-serif !important;
+    font-size:16px; 
+    line-height:1.5 !important; 
+    font-weight:400 ; 
+    letter-spacing:3px !important;
+
     color: #3d435c;
     box-sizing: border-box;
     align-content: center;
@@ -104,6 +108,7 @@ a.nav-link:hover{
 }
 
 .titre{
+    
     text-align: center;
     color: #f4d020;
     font-size: 50px;
@@ -142,7 +147,69 @@ a.nav-link:hover{
     background-color: rgba(0, 0, 0, 0.288);
 }
 
-/*   ///////////////////////////////////////////  VIDEOO ///////////////////////////////////////////         */
+/*   ///////////////////////////////////////////  PARALLAX ///////////////////////////////////////////         */
+
+/* Override UGG site */
+#main {width: 100%; padding:0;}
+.content-asset p {margin:0 auto;}
+.breadcrumb {display:none;}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+/* Typography */
+/**************************/
+#parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}
+#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:black; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
+#parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
+#parallax-world-of-ugg p {font-family:'Source Sans Pro', sans-serif; font-weight:400; font-size:14px; line-height:24px;}
+.first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+
+.sc {color: #3b8595;}
+.ny {color: #3d3c3a;}
+.atw {color: #c48660;}
+
+/* Section - Title */
+/**************************/
+#parallax-world-of-ugg .title {background: white; padding: 60px; margin:0 auto; text-align:center;}
+#parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
+
+/* Section - Block */
+/**************************/
+#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
+#parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
+#parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
+
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(images/bg_2.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(images/bg_1.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  #parallax-world-of-ugg .block {padding: 40px; width:620px;}
+}
+@media screen and (max-width: 767px) {
+  #parallax-world-of-ugg .block {padding: 30px; width:420px;}
+  #parallax-world-of-ugg h2 {font-size:30px;}
+  #parallax-world-of-ugg .block {padding: 30px;}
+  #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
+}
+@media screen and (max-width: 479px) {
+  #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
+}
+  /* FIN PARALLAX */
+
+
+/*   ///////////////////////////////////////////  VIDEO ///////////////////////////////////////////         */
 
 .vid {
     position: relative;
@@ -193,9 +260,9 @@ a.nav-link:hover{
     }
   }
 
-  /* FIN VIDEOOOOO */
+  /* FIN VIDEO */
 
-  /* ///////////////////////////////////// FOOOOOTER ////////////////////////////// */
+  /* ///////////////////////////////////// FOOTER ////////////////////////////// */
   /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
@@ -267,9 +334,8 @@ section {
     margin-bottom: 10px;
 }
 }
-/* FIN FOOTER */
 
-
+/* contact*/
 hr {border-top: 1px solid #000; width:50%;}
 
 a {color: #000;}
@@ -287,3 +353,220 @@ a:link{text-decoration:none;}
   text-decoration: none;
     
 }
+
+/* FIN FOOTER */
+
+/* ////////////////// smooth scrolling mon club ////////////////////// */
+
+
+  
+  .container-fluid{
+    margin:0;
+    padding:0;
+  }
+  
+  .jumbotron-fluid{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+  }
+  
+  .nav{
+    background:#fff;
+  }
+  
+  .nav-item.active .nav-link{
+    color:#F4D020;
+  }
+
+  
+  .display-3{
+    color:#fff;
+    display:block;
+    margin-top:30px;
+  }
+  
+  .one{
+    background: rgb(238, 174, 36);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D76A03, rgb(238, 174, 36));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D76A03, rgb(238, 174, 36)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 200px;
+  height: fit-content;
+  }
+  .three{
+    background: #8EA604;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgb(195, 228, 12), #8EA604);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(195, 228, 12), #8EA604); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 200px;
+  height: fit-content;
+  }
+  .two{
+    background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 200px;
+  height: fit-content;
+  }
+
+  .img{
+      width: 420px;
+      height: 400px;
+      border-bottom-left-radius: 1%;
+      border-bottom-right-radius: 1%;
+      border-top-right-radius: 1%;
+      border-top-left-radius: 1%;
+  }
+  .blaka{
+      text-align: center;
+      height: 100px;
+      width: 400px;
+      vertical-align: middle;
+      padding-top: 20px;
+      margin-left: 20px;
+  }
+  .box{
+      margin-right: 250px;
+      margin-left: 250px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  .container-fluid{
+      padding-left: 200px !important;
+      padding-right: 200px !important;
+      margin-bottom: 50px;
+      margin-top: 50px;
+  }
+
+  .parag{
+      font-size:16px; line-height:1.5; font-weight:400; letter-spacing:3px;
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
+  }
+  
+
+  /* FIN SMOOTH SCROLLING */
+
+  /* //////////////////////// LIGHT GALLERY ////////////////////////// */
+
+  h2{color:#fff;margin-bottom:40px;text-align:center;font-weight:100;}
+  .demo-gallery > ul {
+    margin-bottom: 0;
+  }
+  .demo-gallery > ul > li {
+      float: left;
+      margin-bottom: 15px;
+      margin-right: 20px;
+      width: 200px;
+  }
+  .demo-gallery > ul > li a { 
+    border: 3px solid #FFF;
+    border-radius: 3px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    float: left;
+  }
+  .demo-gallery > ul > li a > img {
+    -webkit-transition: -webkit-transform 0.15s ease 0s;
+    -moz-transition: -moz-transform 0.15s ease 0s;
+    -o-transition: -o-transform 0.15s ease 0s;
+    transition: transform 0.15s ease 0s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    height: 100%;
+    width: 100%;
+  }
+  .demo-gallery > ul > li a:hover > img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+    opacity: 1;
+  }
+  .demo-gallery > ul > li a .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color 0.15s ease 0s;
+    -o-transition: background-color 0.15s ease 0s;
+    transition: background-color 0.15s ease 0s;
+  }
+  .demo-gallery > ul > li a .demo-gallery-poster > img {
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+  }
+  .demo-gallery > ul > li a:hover .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .demo-gallery .justified-gallery > a > img {
+    -webkit-transition: -webkit-transform 0.15s ease 0s;
+    -moz-transition: -moz-transform 0.15s ease 0s;
+    -o-transition: -o-transform 0.15s ease 0s;
+    transition: transform 0.15s ease 0s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    height: 100%;
+    width: 100%;
+  }
+  .demo-gallery .justified-gallery > a:hover > img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+    opacity: 1;
+  }
+  .demo-gallery .justified-gallery > a .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color 0.15s ease 0s;
+    -o-transition: background-color 0.15s ease 0s;
+    transition: background-color 0.15s ease 0s;
+  }
+  .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+  }
+  .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .demo-gallery .video .demo-gallery-poster img {
+    height: 48px;
+    margin-left: -24px;
+    margin-top: -24px;
+    opacity: 0.8;
+    width: 48px;
+  }
+  .demo-gallery.dark > ul > li a {
+    border: 3px solid #04070a;
+  }
+  .home .demo-gallery {
+    padding-bottom: 80px; 
+  }
+  .img-responsive{
+      height: 120px !important;
+  }
+
+  /* FIN GALLERY */
+

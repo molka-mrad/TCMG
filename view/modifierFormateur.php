@@ -26,6 +26,7 @@
 			<?PHP
 				include "../entities/formateur.php";
 				include "../core/formateurC.php";
+				
 				if (isset($_GET['cin'])) {
 					$formateurC = new formateurC();
                     $result = $formateurC->recupererFormateur($_GET['cin']);

@@ -9,11 +9,12 @@ class membres
 	private $inscription;
 	private $abonnement;
 	private $email;
+	private $mdp;
 	private $paiement;
 	private $role;
 	
 	
-	function __construct($cin,$nom,$prenom,$tel,$age,$inscription,$abonnement,$email,$paiement,$role){
+	function __construct($cin,$nom,$prenom,$tel,$age,$inscription,$abonnement,$email,$mdp,$paiement,$role){
 		$this->cin=$cin;
 		$this->nom=$nom;
 		$this->prenom=$prenom;
@@ -22,6 +23,7 @@ class membres
 		$this->inscription=$inscription;
 		$this->abonnement=$abonnement;
 		$this->email=$email;
+		$this->mdp=$mdp;
 		$this->paiement=$paiement;
 		$this->role=$role;
 	}
@@ -49,6 +51,9 @@ class membres
 	}
 	function getmail(){
 		return $this->email;
+	}
+	function getmdp(){
+		return $this->mdp;
 	}
 	function getpai(){
 		return $this->paiement;
@@ -81,6 +86,9 @@ class membres
 	}
 	function setemail($email){
 		$this->email=$email;
+	}
+	function setmdp($mdp){
+		$this->mdp;
 	}
 	function setrole($role){
 		$this->role=$role;

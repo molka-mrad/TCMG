@@ -10,7 +10,7 @@ class formateurs
 	private $email;
 	
 	
-	function __construct($cin,$nom,$prenom,$tel,$age,$inscription,$email){
+	function __construct($cin,$nom,$prenom,$tel,$age,$inscription,$email,$img){
 		$this->cin=$cin;
 		$this->nom=$nom;
 		$this->prenom=$prenom;

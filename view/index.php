@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="stylefront.css">
         <script src="css/jquery.slim.min.js"></script>
         <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="parallax.css">
         <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery-3.3.1.min.js"></script>
@@ -17,21 +16,45 @@
         <nav class="navig">
 
             <div class="log">
+                <script>
+                    jQuery(document).ready(function(){
+
+                    // Show password Button
+                    $("#showpassword").on('click', function(){
+                      
+                      var pass = $("#pwd");
+                      var fieldtype = pass.attr('type');
+                      if (fieldtype == 'password') {
+                        pass.attr('type', 'text');
+                        $(this).text("Masquer Mot de Passe");
+                      }else{
+                        pass.attr('type', 'password');
+                        $(this).text("Afficher Mot de Passe");
+                      }
+                    });
+                    });
+                </script>
                 <?php 
                 session_start ();  
                   if (isset($_SESSION['l']) && isset($_SESSION['p'])) 
                   { 
                 
-                    echo 'Bienvenue '.$_SESSION['l'];
+                    echo 'Bienvenue '.$_SESSION['l'].'<br>';
                     echo '<a href="./logout.php">Se déconnecter</a>';
                   }
                 else { ?>
                   <form id="formconnex" name="formconnex" method="POST" action="connexion.php">
-                      Login :
-                      <input type="text" name="login" id="login" />
-                      Password : 
-                      <input type="password" name="pwd" id="pwd" />
-                      <input type="submit" name="button" id="button" value="Valider" />
+                      <div class="form-group">
+                        Login :
+                        <input type="text" name="login" id="login" placeholder="Nom" />
+                        Password : 
+                        <input type="password" name="pwd" id="pwd" placeholder="Password" />
+                      </div>
+                      <div class="form-check">
+                        <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Afficher Mot de Passe</button> 
+                        <input type="submit" class="btn btn-info" name="button" id="button" ></input>
+                        <a href="recumdp.php"><input type="button"  value="MDP oublié?" class="btn btn-info"> </a>
+                      </div>
                   </form>
                 <?php
                 }  
@@ -52,11 +75,10 @@
                         <td class="nav-item"><a href="Inscription.php" class="nav-link">Inscription</a></td>
                         <td class="nav-item"><a href="boutique.php" class="nav-link">Notre Boutique</a></td>
                         <td class="nav-item"><a href="espacepriv.php" class="nav-link">Mon Espace</a></td>
-                        <td class="nav-item"><a href="Contact.php" class="nav-link">Contact</a></td>
                     </tr>
                 </table>
             </div>
-
+        </nav>
             <section class="vid">
               <div class="overlay"></div>
               <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -71,7 +93,7 @@
                   </div>
               </div>
             </section>
-        </nav>
+        
         <!--
         <section class="azer">
             <div class="welcome" style="background-image:url(images/bg_1.jpg);">
@@ -145,7 +167,7 @@
 
         <section>
           <div class="parallax-two">
-            <h2>Evenements</h2>
+              <h2>Evenements</h2>
           </div>
         </section>
 
@@ -200,7 +222,8 @@
                               <?php
                               }
                               else{
-                                echo 'Connectez vous pour reserver une place';
+                                
+                                echo '<br>Connectez vous pour reserver une place';
                               }
                             ?>
                             </br>
@@ -221,83 +244,8 @@
         </section>
           </div>
         </section>
-    
-<!--
-        <section class="aze">
-        <div class="container">
 
-                <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Gallerie</h1>
-              
-                <hr class="mt-2 mb-5">
-              
-                <div class="row text-center text-lg-left">
-              
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                      <div class="col-lg-3 col-md-4 col-6">
-                        <a href="#" class="d-block mb-4 h-100">
-                              <img class="img-fluid img-thumbnail" src="images/1.jpg" alt="">
-                            </a>
-                      </div>
-                </div>
-              
-              </div>
-              </section> -->
-
-        </div>
+    </div>
         
         <section id="footer">
           <div class="container2" align="center">
@@ -306,9 +254,9 @@
                 <br><br>
                 <h5>Liens rapides</h5>
                 <ul class="list-unstyled quick-links">
-                  <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Accueil</a></li>
-                  <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Mon Club</a></li>
-                  <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Notre Boutique</a></li>
+                  <li><a href="index.php"><i class="fa fa-angle-double-right"></i>Accueil</a></li>
+                  <li><a href="MonClub.php"><i class="fa fa-angle-double-right"></i>Mon Club</a></li>
+                  <li><a href="boutique.php"><i class="fa fa-angle-double-right"></i>Notre Boutique</a></li>
                 </ul>
               </div>
               
@@ -328,7 +276,7 @@
                       <h4 class="pt-2">Site Web</h4>
                       <i class="fas fa-globe" style="color:#000"></i> www.TCMG.tn<br>
                       <h4 class="pt-2">Telephone</h4>
-                      <i class="fas fa-phone" style="color:#000"></i> <a href="tel:+"> +216 71 000 000 </a><br>
+                      <i class="fas fa-phone" style="color:#000"></i> <a href="tel:+"> +216 71 432 350 </a><br>
                       <h4 class="pt-2">Email</h4>
                       <i class="fa fa-envelope" style="color:#000"></i> <a href="">tcmg@gmail.com</a><br>
                     </div>

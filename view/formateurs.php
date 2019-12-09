@@ -60,7 +60,7 @@
                                         <input type="hidden" value="<?PHP echo $row['cin']; ?>" name="cin">
                                     </form>
                                 </td>
-                                <td class="ff"><a href="modifierFormateur.php?id=<?PHP echo $row['cin']; ?>">
+                                <td class="ff"><a href="modifierFormateur.php?cin=<?PHP echo $row['cin']; ?>">
                                         Modifier</a></td>
                                         
                             </tr>
