@@ -53,6 +53,7 @@ class membrec
 	
 	function ajoutermembree($membre)
 	{
+	
 		$sql = "insert into membres (cin,nom,prenom,tel,age,inscription,abonnement,email,mdp,paiement,role) values (:cin, :nom,:prenom,:tel,:age,:inscription,:abonnement,:email,:mdp,:paiement,:role) ;insert into users(user_id,user_name,user_email,user_pass,joining_date,role) VALUES(:cin,:nom,:email,:mdp,:inscription,:role) ";
 		$db = config::getConnexion();
 		try {
