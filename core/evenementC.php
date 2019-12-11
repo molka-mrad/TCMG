@@ -73,7 +73,7 @@ class evenementC {
 
 	function modifierEvenement($evenement, $id)
 	{
-		$sql = "UPDATE evenements SET id=:idd, libelle=:libelle,descrip=:descrip,dateDeb=:dateDeb,dateFin=:dateFin,nbParticip=:nbParticip,lieux:=lieux,img=:img WHERE id=:id";
+		$sql = "UPDATE evenements SET id=:idd, libelle=:libelle, descrip=:descrip, dateDeb=:dateDeb, dateFin=:dateFin, nbParticip=:nbParticip, lieux=:lieux, img=:img WHERE id=:id";
 
 		$db = config::getConnexion();
 		try {
@@ -88,7 +88,7 @@ class evenementC {
 			$lieux = $evenement->getLieux();
 			$img = $evenement->getImg();
 			
-			$datas = array(':idd' => $idd, ':id' => $id, ':libelle' => $libelle, ':decrip' => $descrip, ':dateDeb' => $dateDeb, ':dateFin' => $dateFin,':nbParticip' => $nbParticip, ':lieux' =>$lieux, ':img' => $img);
+			$datas = array(':idd' => $idd, ':id' => $id, ':libelle' => $libelle, ':descrip' => $descrip, ':dateDeb' => $dateDeb, ':dateFin' => $dateFin,':nbParticip' => $nbParticip, ':lieux' =>$lieux, ':img' => $img);
 			$req->bindValue(':idd', $idd);
 			$req->bindValue(':id', $id);
 			$req->bindValue(':libelle', $libelle);
