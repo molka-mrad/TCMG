@@ -36,6 +36,9 @@
 						$dateDeb = $row['dateDeb'];
 						$dateFin = $row['dateFin'];
 						$nbParticip = $row['nbParticip'];
+						$lieux = $row['lieux'];
+						$img = $row['img'];
+
 			?>
 			
 			<form method="POST">
@@ -66,7 +69,14 @@
 						<td class="ff">Nombre participants</td>
 						<td class="ff"><input type="text" class='gg' name="nbParticip" value="<?PHP echo $nbParticip ?>"></td>
 					</tr>
-
+					<tr>
+						<td class="ff">Lieux</td>
+						<td class="ff"><input type="text" class='gg' name="lieux" value="<?PHP echo $lieux ?>"></td>
+					</tr>
+					<tr>
+						<td class="ff">Image</td>
+						<td class="ff"><input type="text" class='gg' name="img" value="<?PHP echo $img ?>"></td>
+					</tr>
 					<tr>
 						<td></td>
 						<td class="ff"><input  type="submit" name="modifier" value="modifier"></td>
@@ -81,7 +91,7 @@
 				}
 			}
 			if (isset($_POST['modifier'])) {
-				$evenement = new evenements($_POST['id'], $_POST['libelle'], $_POST['descrip'], $_POST['dateDeb'], $_POST['dateFin'], $_POST['nbParticip']);
+				$evenement = new evenements($_POST['id'], $_POST['libelle'], $_POST['descrip'], $_POST['dateDeb'], $_POST['dateFin'], $_POST['nbParticip'],$_POST['lieux'],$_POST['img']);
 				$evenementC->modifierEvenement($evenement, $_POST['id_ini']);
 				echo $_POST['id_ini'];
 				header('Location: evenements.php');
