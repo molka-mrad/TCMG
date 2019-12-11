@@ -1,9 +1,8 @@
 <?php
 include "../core/evenementC.php";
 include "../entities/evenement.php";
-
-
-if (isset($_GET['reserver'])) {
+var_dump($_POST['reserver']);
+if (isset($_POST['reserver'])) {
     
     
     $evenementC= new evenementC;
@@ -14,14 +13,14 @@ if (isset($_GET['reserver'])) {
         $descrip = $row['descrip'];
         $dateDeb = $row['dateDeb'];
         $dateFin = $row['dateFin'];
-        $nbParticip = $row['nbParticip'];
+        $nbParticip = ($row['nbParticip']+'1');
         $lieux = $row['lieux'];
         $img = $row['img'];
     }
     $evenement=new evenements($id,$libelle,$descrip,$dateDeb,$dateFin,$nbParticip,$lieux,$img);
-    $evenementC->modifierEvenement($evenement,'8');
-    var_dump($_POST['id']);
+    $evenementC->modifierEvenement($evenement,$_POST['id']);
     
     echo '<body onLoad="alert(\'Votre place a ete reservee\')">'; 
+    header('Location: index.php');
 }
 ?>

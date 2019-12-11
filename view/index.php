@@ -216,7 +216,7 @@
                               { 
                                 ?>
                                   <form method="POST" action="reservation.php">
-                                        <input type="submit" name="reserver" value="reserver une place">
+                                        <button type="submit" name="reserver" >reserver une place</button>
                                         <input type="hidden" value="<?PHP echo $row['id']; ?>" name="id">
                                     </form>
                               <?php
