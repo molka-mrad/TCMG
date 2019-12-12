@@ -69,11 +69,11 @@
       <div class="menu">
           <table class="menu-tab" border="0" width="80%" align="center">
               <tr>
-                  <td class="nav-item"><a href="index.php" class="nav-link">Accueil</a></td>
-                  <td class="nav-item"><a href="MonClub.php" class="nav-link">Notre Club</a></td>
-                  <td class="nav-item"><a href="Inscription.php" class="nav-link">Inscription</a></td>
-                  <td class="nav-item"><a href="boutique.php" class="nav-link">Notre Boutique</a></td>
-                  <td class="nav-item"><a href="espacepriv.php" class="nav-link">Mon Espace</a></td>
+                <td class="nav-item"><a href="index.php" class="nav-link">Accueil</a></td>
+                <td class="nav-item"><a href="MonClub.php" class="nav-link">Notre Club</a></td>
+                <td class="nav-item"><a href="Inscription.php" class="nav-link">Inscription</a></td>
+                <td class="nav-item"><a href="+/produits.php" class="nav-link">Notre Boutique</a></td>
+                <td class="nav-item"><a href="espacepriv.php" class="nav-link">Mon Espace</a></td>
               </tr>
           </table>
       </div>
