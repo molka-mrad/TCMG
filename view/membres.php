@@ -171,7 +171,8 @@ function filterTable($query)
 
                     </div>
             
-
+               <button type="button" value="Print" onclick="javascript:window.print();">
+                    <span>Print</span>
         </div>
         
     </body>
