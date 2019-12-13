@@ -5,26 +5,12 @@
 <body>
 <?php 
 include 'User.php';
-//$log="admin";
-//$pwd="admin";
-/*$servername="localhost";
-	$username="root";
-	$password="";
-	$dbname="dblogin";
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", 
-	$username, $password);
-	$req="select * from users where user_name='$login' && user_pass='$pwd'";
-	$rep=$conn->query($req);
-	$res=$rep->fetchAll();
-	*/
+
 $c=new config();
 $conn=$c->getConnexion();
 $user=new User($_POST['login'],$_POST['pwd'],$conn);
 $u=$user->Logedin($conn,$_POST['login'],$_POST['pwd']);
 
-	//var_dump($u);
-//$logR=$_POST['login'];
-//$pwdR=$_POST['pwd'];
 $vide=false;
 if (!empty($_POST['login']) && !empty($_POST['pwd'])){
 	
@@ -37,6 +23,7 @@ if (!empty($_POST['login']) && !empty($_POST['pwd'])){
 	if ($t['user_name']==$_POST['login'] && $t['user_pass']==$_POST['pwd']&& strcmp($t['role'], $str2)==0){
 		
 		session_start();
+		$_SESSION['cin']=$_POST['cin'];
 		$_SESSION['l']=$_POST['login'];
 		$_SESSION['p']=$_POST['pwd'];
 		$_SESSION['r']=$t['role'];
@@ -44,7 +31,8 @@ if (!empty($_POST['login']) && !empty($_POST['pwd'])){
 		
 		}
 		if ($t['user_name']==$_POST['login'] && $t['user_pass']==$_POST['pwd']&& strcmp($t['role'], $str)==0){
-		    session_start();
+			session_start();
+		$_SESSION['cin']=$_POST['cin'];
 		$_SESSION['l']=$_POST['login'];
 		$_SESSION['p']=$_POST['pwd'];
 		$_SESSION['r']=$t['role'];
@@ -53,6 +41,7 @@ if (!empty($_POST['login']) && !empty($_POST['pwd'])){
 			}
 			if ($t['user_name']==$_POST['login'] && $t['user_pass']==$_POST['pwd']&& strcmp($t['role'], $str3)==0){
 				session_start();
+			$_SESSION['cin']=$_POST['cin'];
 			$_SESSION['l']=$_POST['login'];
 			$_SESSION['p']=$_POST['pwd'];
 			$_SESSION['r']=$t['role'];
