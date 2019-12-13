@@ -39,6 +39,7 @@
 						$abonnement = $row['abonnement'];
 						$pay = $row['paiement'];
 						$eemail = $row['email'];
+						$mdp = $row['mdp'];
 						$role = $row['role'];
 			?>
 			
@@ -87,6 +88,10 @@
 						<td class="ff"><input class='gg' type="text" name="eemail" value="<?PHP echo $eemail ?>"></td>
 					</tr>
 					<tr>
+						<td class="ff">mot de passe</td>
+						<td class="ff"><input class='gg' type="text" name="mdp" value="<?PHP echo $mdp ?>"></td>
+					</tr>
+					<tr>
 						<td></td>
 						<td class="ff"><input  type="submit" name="modifier" value="modifier"></td>
 					</tr>
@@ -104,7 +109,7 @@
 				}
 			}
 			if (isset($_POST['modifier'])) {
-				$membre = new membres($_POST['cin'], $_POST['nom'], $_POST['prenom'], $_POST['tel'], $_POST['age'], $_POST['inscription'], $_POST['abonnement'], $_POST['eemail'], $_POST['pay'], $_POST['role']);
+				$membre = new membres($_POST['cin'], $_POST['nom'], $_POST['prenom'], $_POST['tel'], $_POST['age'], $_POST['inscription'], $_POST['abonnement'], $_POST['eemail'],$_POST['mdp'], $_POST['pay'], $_POST['role']);
 				$membrec->modifiermembre($membre, $_POST['cin_ini']);
 				echo $_POST['cin_ini'];
 				header('Location: membres.php');
